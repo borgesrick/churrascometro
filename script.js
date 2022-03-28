@@ -13,12 +13,12 @@ function calcular(){
     if (duracao == 0) {
         resultado.innerHTML = "<p> Sem tempo, sem festa.</p>";
     } else {
-    let totaldecarne = carnepp(duracao) * adulto + (carnepp(duracao)/2*crianca);
-    let totalbebida = bebidapp(duracao) * adulto + (bebidapp(duracao)/2*crianca);
-    let totalcerveja = cervejapp(duracao) * adulto;
+    let totaldecarne = (carnepp(duracao) * adulto + (carnepp(duracao)/2*crianca))/1000;
+    let totalbebida = (bebidapp(duracao) * adulto + (bebidapp(duracao)/2*crianca))/1000;
+    let totalcerveja = (cervejapp(duracao) * adulto)/1000;
 
 
-    resultado.innerHTML = '<p>' + totaldecarne + 'g de carne <br>' + totalbebida + 'ml de refrigerante<br>' + totalcerveja + 'ml de cerveja</p>';
+    resultado.innerHTML = '<p>' + totaldecarne + 'kg de carne <br>' + totalbebida + 'l de refrigerante<br>' + totalcerveja + 'l de cerveja</p>';
 
     function carnepp (duracao) {
         if (duracao >= 6){return 650;}
