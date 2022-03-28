@@ -10,6 +10,9 @@ function calcular(){
     let crianca = inputcrianca.value;
     let duracao = inputduracao.value;
     
+    if (duracao == 0) {
+        resultado.innerHTML = "<p> Sem tempo, sem festa.</p>";
+    } else {
     let totaldecarne = carnepp(duracao) * adulto + (carnepp(duracao)/2*crianca);
     let totalbebida = bebidapp(duracao) * adulto + (bebidapp(duracao)/2*crianca);
     let totalcerveja = cervejapp(duracao) * adulto;
@@ -27,10 +30,4 @@ function calcular(){
 
     function cervejapp (duracao) {
         if (duracao >= 6){return 1800;}
-        else {return 1200;}} 
-
-    
-        
-
-}
-
+        else {return 1200;}} }}
